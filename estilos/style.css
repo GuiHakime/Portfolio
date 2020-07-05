@@ -165,7 +165,7 @@ nav ul li:hover {
   border: 1px solid yellowgreen;
   outline: none;
   border-radius: 50px;
-  width: 150px;
+  width: 44%;
   height: 50px;
   margin-top: 40px;
   opacity: 0.9;
@@ -186,6 +186,10 @@ nav ul li:hover {
   opacity: 1;
 }
 .img-project {
+  max-width: 100%;
+}
+.img-project img {
+  max-width: 100%;
 }
 .project-content {
 }
