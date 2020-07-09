@@ -8,7 +8,7 @@
 /* Conteúdo principal */
 
 .conteudo-principal {
-  background: url(../img/imagemprincipal.png);
+  background: url(../img/create.png);
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -22,11 +22,12 @@
 
 header {
   box-shadow: 2px 2px 2px black;
-  width: 70%;
+  width: 100%;
   margin: 0 auto;
   color: #fff;
+  background-color: rgb(0, 0, 0, 0.7);
   height: 80px;
-  padding: 0 1rem;
+  padding: 0 10rem;
 }
 
 .menu nav {
@@ -50,7 +51,7 @@ nav ul li {
 
 nav ul li a {
   text-decoration: none;
-  font-size: 15pt;
+  font-size: 16pt;
   display: block;
   color: #fff;
 }
@@ -88,6 +89,10 @@ nav ul li:hover {
   overflow: hidden;
   box-shadow: 2px 2px 2px grey;
 }
+.card:hover {
+  height: 430px;
+  transition: 2s;
+}
 
 .img-card {
   position: absolute;
@@ -99,10 +104,12 @@ nav ul li:hover {
   transition: 0.5s;
   transition-delay: 0.3s;
 }
+
 .card:hover .img-card {
   clip-path: circle(80px at center 100px);
   transition-delay: 0s;
 }
+
 .card:hover .img-card .img-card img {
   position: absolute;
   top: 0;
@@ -111,6 +118,7 @@ nav ul li:hover {
   height: 100%;
   object-fit: cover;
 }
+
 .card-content {
   position: absolute;
   left: 0;
@@ -121,21 +129,25 @@ nav ul li:hover {
   box-sizing: border-box;
   text-align: center;
 }
+
 .card-content h2 {
   margin: 0;
   padding: 0;
 }
+
 .card-content h2,
 .card-content p {
   opacity: 0;
   transition: 0.5s;
   transform: translateY(20px);
 }
+
 .card:hover .card-content h2 {
   opacity: 1;
   transform: translateY(0px);
   transition-delay: 0.3s;
 }
+
 .card:hover .card-content p {
   opacity: 1;
   transform: translateY(0px);
@@ -151,6 +163,7 @@ nav ul li:hover {
   grid-template-columns: 1fr;
   margin: 0 auto;
 }
+
 .box-project {
   display: flex;
   flex-wrap: wrap;
@@ -160,6 +173,7 @@ nav ul li:hover {
   padding-top: 90px;
   padding-bottom: 90px;
 }
+
 .box-project button {
   font-size: 11pt;
   border: 1px solid yellowgreen;
@@ -171,65 +185,98 @@ nav ul li:hover {
   opacity: 0.9;
   box-shadow: 1px 1px 1px black;
 }
+
 #preview {
-  box-shadow: 10px 1px 10px black;
+  box-shadow: 7px 1px 5px black;
 }
+
 #preview:hover {
   box-shadow: 1px 1px 1px black;
 }
+
 #visitar {
   margin-left: 20px;
 }
+
 .box-project button:hover {
   color: rgb(12, 68, 12);
   background-color: rgba(255, 238, 4, 0.781);
   opacity: 1;
 }
+
 .img-project {
   max-width: 100%;
 }
+
 .img-project img {
   max-width: 100%;
 }
+
 .project-content {
+  height: 260px;
 }
+
 .project-content h2 {
-  text-align: center;
+  padding-bottom: 25px;
   font-size: 2.3em;
-  padding: 10px;
 }
-.project-content h2 p {
+
+.project-content p {
+  padding: 1px;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  font-size: 1.1em;
+  color: rgb(138, 137, 137);
+}
+
+.project-content a {
+  text-decoration: none;
+  border-radius: 7px;
+  padding: 0px 10px 0px 10px;
+  background-color: rgba(255, 238, 4, 0.781);
+}
+
+.project-content a:hover {
+  text-decoration: underline;
 }
 
 /* Calendário*/
 .recreio {
   display: flex;
-  align-items: center;
   justify-content: center;
   background: #111;
-  height: 600px;
+  height: 120px;
 }
+
 .calendario {
-  box-shadow: 3px 10px 8px #fff;
+  background-color: rgb(15, 13, 13);
+  box-shadow: 2px 2px 20px 0px black;
+  height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   position: relative;
-  width: 200px;
-  background: #fff;
-  border-radius: 8px;
+  width: ;
+  padding: 5px;
   overflow: hidden;
   -webkit-box-reflect: below 1px
     linear-gradient(transparent, transparent, #0004);
   text-align: center;
 }
+
 .calendario #mes {
   position: relative;
-  padding: 5px 10px;
+  height: 100%;
+  padding-top: 17px;
   background: rgba(255, 238, 4, 0.781);
   color: #fff;
   font-size: 30px;
   font-weight: 700;
 }
+
 .calendario #dia {
-  margin-top: 20px;
+  height: 100%;
+  margin-top: 54px;
+  margin-left: 9px;
   font-size: 20px;
   font-weight: 300;
   color: #999;
@@ -237,38 +284,120 @@ nav ul li:hover {
 
 .calendario #numero-dia {
   margin-top: 0px;
+  margin-left: 9px;
   font-size: 80px;
   line-height: 1em;
   font-weight: 700;
-  color: #333;
+  color: #fff;
 }
+
 .calendario #ano {
-  margin-bottom: 20px;
+  height: 100%;
+  margin-top: 55px;
+  margin-left: 9px;
   font-size: 20px;
   font-weight: 500;
   color: #999;
 }
 
+/* About Me*/
+.contato {
+  align-items: center;
+  justify-content: center;
+  background: #111;
+  color: white;
+  display: flex;
+  flex-wrap: wrap;
+  padding-bottom: 40px;
+}
+.box-sobre {
+  box-shadow: 1px 0px 5px 0px grey;
+  padding: 30px;
+  width: 290px;
+  margin-left: 150px;
+  height: 430px;
+  border: 1px solid grey;
+}
+.img-box {
+  width: 130px;
+  height: 130px;
+  border: 1px solid red;
+  border-radius: 50%;
+  margin: 0 auto;
+}
+.box-sobre p,
+h4 {
+  text-align: center;
+  padding-top: 20px;
+}
+.contato-content {
+  width: 50%;
+  text-align: center;
+}
+.contato-content form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.contato-content form input,
+textarea {
+  color: #fff;
+  margin-top: 30px;
+  background: transparent;
+  border: none;
+  outline: none;
+  border-bottom: 1px solid #fff;
+  height: 40px;
+  width: 300px;
+}
+.contato-content form button {
+  opacity: 0.8;
+  width: 200px;
+  height: 30px;
+  margin-top: 15px;
+  outline: none;
+  border: none;
+  border-radius: 20px;
+  background: linear-gradient(to right, yellow, black);
+}
+.contato-content form button:hover {
+  opacity: 1;
+  box-shadow: 1px 1px 1px yellow;
+}
+.contato-content form input:hover::placeholder {
+  position: relative;
+  padding: 130px;
+  transition: 1s;
+  color: #fff;
+}
+
+.img-box img {
+}
 /* footer*/
 .footer {
   font-size: 15pt;
-  padding: 50px;
+  padding: 30px;
   text-align: center;
   background: linear-gradient(to bottom, #111, rgb(37, 37, 37));
   color: #fff;
 }
+
 .img-footer {
   padding-top: 40px;
   justify-content: center;
   display: flex;
 }
+
 .img-footer img {
   padding-left: 40px;
   opacity: 0.5;
 }
+
 .img-footer a:hover img {
   opacity: 1;
 }
+
 @media (max-width: 900px) {
   header {
     background-color: #010615;
@@ -325,13 +454,23 @@ nav ul li:hover {
     display: flex;
     justify-content: center;
   }
+
   /*Cards*/
 
   .cards {
     position: relative;
     bottom: 140px;
   }
+
   .card {
     min-width: 30%;
+  }
+
+  .projects {
+    margin-top: -510px;
+  }
+
+  .box-sobre {
+    margin-left: 0px;
   }
 }
