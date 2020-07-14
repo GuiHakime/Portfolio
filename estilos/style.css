@@ -7,6 +7,10 @@
   font-family: "Times New Roman", Times, serif;
 }
 
+body {
+  background-color: #f6f7fe;
+}
+
 /* Conteúdo principal */
 
 #conteudo-principal {
@@ -224,7 +228,7 @@ nav ul li:hover {
 /* Sessão projects*/
 
 #projects {
-  padding-top: 480px;
+  padding-top: 440px;
   width: 84%;
   display: grid;
   grid-template-columns: 1fr;
@@ -238,12 +242,17 @@ nav ul li:hover {
 }
 
 .box-project {
+  background-color: #ffff;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
   align-items: center;
   border-top: 1px solid grey;
-  padding-top: 90px;
+  border-radius: 20px;
+  box-shadow: 2px 2px 2px grey;
+  padding-top: 60px;
+  margin-top: 50px;
+  margin-bottom: 20px;
   padding-bottom: 90px;
 }
 
