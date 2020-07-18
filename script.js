@@ -135,3 +135,22 @@ function smoothScrollTo(endX, endY, duration) {
         window.scroll(newX, newY);
     }, 1000 / 60); // 60 fps
 };
+
+/* FUNÇÂO POPUP*/
+
+function iniciaModal(modalID) {
+    const modal = document.getElementById(modalID);
+    if (modal) {
+        modal.classList.add('mostrar')
+        modal.addEventListener('click', (e) => {
+            if (e.target.id == modalID || e.target.className == 'close') {
+                modal.classList.remove('mostrar')
+            }
+        })
+    }
+}
+
+const preview = document.querySelector('.pr1')
+preview.addEventListener('click', () => {
+    iniciaModal('modal-promocao')
+})
