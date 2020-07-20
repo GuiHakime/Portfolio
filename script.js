@@ -151,6 +151,14 @@ function iniciaModal(modalID) {
 }
 
 const preview = document.querySelector('.pr1')
+const Preview2 = document.querySelector('.pr2')
+const Preview3 = document.querySelector('.pr3')
 preview.addEventListener('click', () => {
     iniciaModal('modal-promocao')
+})
+Preview2.addEventListener('click', () => {
+    iniciaModal('modal-promocao2')
+})
+Preview3.addEventListener('click', () => {
+    iniciaModal('modal-promocao3')
 })

@@ -262,9 +262,11 @@ nav ul li:hover {
   margin-top: 50px;
   margin-bottom: 20px;
   padding-bottom: 90px;
+  border-left: 2px solid yellow;
 }
 
 .box-project button {
+  cursor: pointer;
   font-size: 12pt;
   border: 1px solid yellowgreen;
   outline: none;
@@ -317,6 +319,7 @@ nav ul li:hover {
 }
 
 .project-content p {
+  width: 480px;
   padding: 1px;
   font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
   font-size: 1.1em;
@@ -370,10 +373,9 @@ nav ul li:hover {
 
 .modal {
   background: white;
-  width: 60%;
+  width: 80%;
   min-width: 300px;
-  padding: 40px;
-  border: 6px solid yellow;
+  border: 5px solid yellow;
   box-shadow: 0 0 0 10px white;
   position: relative;
 }
@@ -392,6 +394,11 @@ nav ul li:hover {
   font-weight: 600;
   cursor: pointer;
   box-shadow: 0 4px 4px 0 rgba(0, 0, 0, .3);
+}
+
+.modal img {
+  width: 30%;
+  padding: 10px;
 }
 
 /* Calendário*/
@@ -712,5 +719,25 @@ textarea {
   .line {
     padding-top: 18px;
     font-size: 13pt;
+  }
+
+  .project-content {
+    padding-bottom: 500px;
+  }
+
+  .project-content p {
+
+    text-align: center;
+    width: 90%;
+    margin: 0 auto;
+  }
+
+  #btnp {
+    width: 86%;
+    margin: 0 auto;
+  }
+
+  .box-project {
+    height: 760px;
   }
 }
