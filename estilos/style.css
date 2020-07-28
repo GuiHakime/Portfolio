@@ -614,9 +614,12 @@ nav ul li a:hover {
   min-width: 200px;
 }
 
+
+
 #modal-promocao3 .modal img {
   width: auto;
-  max-width: 46%;
+  max-width: 40%;
+  min-width: 300px;
 
 }
 
