@@ -13,12 +13,13 @@
 <body>
   <section id="conteudo-principal">
     <header>
-      <div id="logo-mobile">Guilherme Hakime</div>
+      <div id="logo-mobile"> Guilherme Hakime</div>
       <div class="menu">
         <nav>
           <div class="logo">
             <ul>
-              <li><a href="">//Guilherme Hakime</a></li>
+              <li><img src="./img/logo.png" alt=""></li>
+              <li><a href=""> Guilherme Hakime</a></li>
             </ul>
           </div>
           <div class="logo2">
@@ -30,7 +31,7 @@
           </div>
         </nav>
       </div>
-      <div class="burger">///</div>
+      <div class="burger"> <img src="./img/menu.png" alt="ícone do menu"></div>
     </header>
   </section>
 
@@ -42,9 +43,46 @@
     <p>Front-end</p>
   </div>
 
+  <button id="skills">Veja minhas Skills</button>
+
   <!--Sessão cards-->
 
-  <section class="cards">
+  <section class="container-card txt">
+
+    <div class="box-card">
+      <div class="card-pri-content" id="cont1">
+        <h1>DESENVOLVIMENTO DE SITES</h1>
+        <p>-Precisa de um site?</p>
+        <p>-Landing Page?</p>
+        <p>-Página institucional?</p>
+        <p>.</p>
+        <p>PODE DEIXAR COMIGO!</p>
+      </div>
+    </div>
+
+    <div class="box-card">
+      <div class="card-pri-content">
+        <h1>MANUTENÇÂO</h1>
+        <p>Caso sua página web não esteja funcionando correntamente ou precisa adicionar/remover algum conteúdo, talvez
+          seja necessário fazer uma otimização e todas as devidas modificações no código.</p>
+        <p id="danger">Não trabalho com lojas virtuais</p>
+
+      </div>
+    </div>
+
+    <div class="box-card">
+      <div class="card-pri-content">
+        <h1>PSD > HTML</h1>
+        <p>Transforme o seu design PhotoShop em uma página web, sem perder nenhum detalhe e ainda com todas as cores e
+          animações, até mesmo modificações a gosto do cliente.</p>
+
+
+      </div>
+    </div>
+  </section>
+
+  <!--Cards-secundário-->
+  <section class="cards" id="cards-js">
 
     <div class="card">
 
@@ -53,11 +91,8 @@
       </div>
 
       <div class="card-content">
-        <h2>HTML 5</h2>
-        <p>Linguagem de marcação de Hipertexto a qual pode ser lida por qualquer navegador de internet, além de possuir
-          semântica,performance, entre outros benefícios.</p>
-        <p><a href="https://developer.mozilla.org/pt-BR/docs/Web/HTML/HTML5" target="_blank" rel="noopener">Saiba
-            mais</a></p>
+        <p>Código HTML com boa semântica, contando com estrategias para facilitar a leitura do código pelo navegador
+          além de melhorar as buscas(SEO).</p>
       </div>
 
     </div>
@@ -80,6 +115,7 @@
     </div>
 
     <div class="card">
+      <button class="close-card">X</button>
 
       <div class="img-card">
         <img src="./img/javascript-logo.png" alt="javascript-logo" />
@@ -87,13 +123,17 @@
 
       <div class="card-content">
         <h2>JAVASCRIPT</h2>
-        <p>Juntamente com HTML e CSS, o JavaScript é uma das três principais tecnologias da World Wide Web. Em uma
-          Página Web a linguagem é utilizada para fazer as animações e interações. </p>
-        <p><a href="https://developer.mozilla.org/pt-BR/docs/Web/JavaScript" target="_blank" rel="noopener">Saiba
-            mais</a></p>
+        <p>Amador na programação em javascript, porém em constante desenvolvimento para dominar completamente a
+          linguagem </p>
+        <div class="skill-js">
+          <p id="skilljs">JAVASCRIPT VANILLA</p>
+          <p id="skilljs2">NODEJS</p>
+          <p id="skilljs3">VUE</p>
+        </div>
       </div>
 
     </div>
+
   </section>
   <hr />
 
@@ -105,7 +145,7 @@
 
     <div class="box-project" data-anime="left">
 
-      <div class="img-project"><img src="./img/tela.png" alt="" /></div>
+      <div class="img-project"><img src="./img/tela1.png" alt="" /></div>
 
       <div class="project-content">
         <h2>Nome do projeto</h2>
@@ -170,20 +210,23 @@
 
   <div class="contato">
     <div class="box-sobre">
-      <div class="img-box"><img src="" alt="" /></div>
+      <div class="img-box"><img src="./img/foto.png" alt="foto do rosto" /></div>
       <h4>Guilherme Hakime</h4>
       <p>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos
-        sequi earum amet quibusdam quo rerum animi delectus! Sit eaque
-        sapiente quod sed qui mollitia obcaecati at sequi nesciunt. Dicta,
-        modi.
+        Olá, meu nome é Guilherme Hakime Andrade sou entusiasta no ramo da programação, atualmente venho me dedicando a
+        trabalhos freelancers e estudos em desenvolvimento web. E seja BEM-VINDO AO MEU PORTFOLIO!, Caso tenha alguma
+        dúvida
+        entre em contato!, seja por
+        projetos ou curiosidades. <a href="https://api.whatsapp.com/send?phone=5516982269786" target="_blank"
+          rel="noopener"> <img src="./img/whats-icon.png" alt=""></a>
       </p>
-      <p>16 982269786</p>
+      <p>(16) 98226-9786 </p>
+
     </div>
 
     <div class="contato-content">
       <h1>Entre em contato</h1>
-      <form action="">
+      <form method="POST" action="">
         <input type="text" placeholder="NOME" id="nome" />
         <input type="text" placeholder="EMAIL" id="email" />
         <input type="text" placeholder="qualquer" id="qualquer" />
@@ -199,10 +242,14 @@
       <div class="icon-footer">
         <ul>
           <li><a href=""><i class="fa fa-facebook" aria-hidden="true" id="face1"></i></a></li>
-          <li><a href=""><i class="fa fa-whatsapp" aria-hidden="true" id="wp1"></i></a></li>
-          <li><a href=""><i class="fa fa-github" aria-hidden="true" id="gt1"></i></a></li>
+          <li><a href="https://api.whatsapp.com/send?phone=5516982269786"><i class="fa fa-whatsapp" aria-hidden="true"
+                id="wp1"></i></a></li>
+          <li><a href="https://github.com/GuiHakime" target="_blank" rel="noopener"><i class="fa fa-github"
+                aria-hidden="true" id="gt1"></i></a></li>
         </ul>
       </div>
+      <a href="https://www.vectorstock.com/royalty-free-vector/silhouette-dog-design-vector-27037703">Vector image by
+        VectorStock / buqancreative</a>
     </footer>
   </section>
 
@@ -211,10 +258,8 @@
   <div id="modal-promocao" class="modal-container ">
     <div class="modal">
       <button class="close">&times;</button>
-      <h3 class="subtitulo">Cadastre-se na Newaletter</h3>
-      <input type="text">
-      <input type="button" value="AUEAUE">
-
+      <img src="./img/preview1.png" alt="foto de preview do portfólio">
+      <img src="./img/preview1s.png" alt="">
     </div>
   </div>
 
@@ -222,8 +267,8 @@
     <div class="modal">
       <button class="close">&times;</button>
 
-      <img src="./img/preview2.png" alt="">
-      <img src="./img/preview2s.png" alt="">
+      <img src="./img/preview2.png" alt="foto de preview GrillHouse-Website">
+      <img src="./img/preview2s.png" alt="segunda foto de preview GrillHouse-Website">
 
     </div>
   </div>
@@ -231,11 +276,19 @@
   <div id="modal-promocao3" class="modal-container ">
     <div class="modal">
       <button class="close">&times;</button>
-      <h3 class="subtitulo">Cadastre-se na Newaletter</h3>
-      <input type="text">
-      <input type="button" value="AUEAUE">
+
+      <img src="./img/preview3.png" alt="">
 
     </div>
+  </div>
+
+  <!--Whats Icon-->
+  <div class="wp">
+    <p>WhatsApp</p>
+    <a href="https://api.whatsapp.com/send?phone=5516982269786" target="_blank" rel="noopener">
+      <img src="./img/whats-icon.png" alt="WhatsApp">
+    </a>
+
   </div>
 
   <script src="script.js"></script>

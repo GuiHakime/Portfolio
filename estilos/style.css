@@ -59,19 +59,29 @@ nav ul li {
 }
 
 nav ul li a {
+  margin-top: 2px;
   text-decoration: none;
   font-size: 16pt;
   display: block;
   color: #fff;
+  padding: 5px;
 }
 
-nav ul li:hover {
+nav ul li a:hover {
   border-bottom: 2px solid grey;
 }
 
 .burger,
 #logo-mobile {
   display: none;
+}
+
+.logo ul {
+  display: flex;
+}
+
+.logo img {
+  width: 80px;
 }
 
 /* Text-Animation*/
@@ -136,10 +146,129 @@ nav ul li:hover {
 }
 
 /*Sessão Cards*/
+#skills {
+  position: absolute;
+  bottom: 90px;
+  margin-left: 10%;
+  border-bottom-left-radius: 20px;
+  width: 160px;
+  height: 80px;
+  border: none;
+  margin: 20px 60px;
+  color: black;
+  background-color: rgb(255, 0, 0, .7);
+  cursor: pointer;
+  border-left: 2px solid red;
+  font-size: 20pt;
+  font-weight: 600;
+  outline: none;
+}
+
+#skills:hover {
+  background-color: red;
+}
+
+#cont1 p {
+  text-align: initial;
+  padding: 4px;
+  padding-left: 20px;
+}
+
+#danger {
+  margin-bottom: -20px;
+  padding-top: 5px;
+  color: rgb(134, 9, 9, .8);
+}
+
+
+
+.container-card {
+  justify-content: center;
+  align-items: center;
+  display: none;
+  width: 100%;
+  margin: 0 auto;
+  position: absolute;
+  bottom: -150px;
+  left: 0;
+  right: 0;
+
+}
+
+.container-card.txt {
+  display: flex;
+}
+
+.container-card .box-card {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgb(0, 0, 0, .95);
+  color: #fff;
+  position: relative;
+  height: 230px;
+  margin: 20px;
+  width: 290px;
+}
+
+.container-card .box-card:hover {
+  color: #000;
+}
+
+.container-card .box-card:before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: 4px solid #fff;
+  background: #000;
+  border-bottom-left-radius: 20px;
+}
+
+.container-card .box-card:hover:before {
+  background: #fff;
+  transition: .5s;
+}
+
+.container-card .box-card .card-pri-content {
+  position: absolute;
+  padding: 20px;
+  text-align: center;
+  transition: .5s;
+}
+
+.card-pri-content h1 {
+  padding: 20px;
+}
+
+
+.container-card .box-card:after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 50%;
+  height: 100%;
+  border: 4px solid #fff;
+  border-right: none;
+  background: rgba(255, 255, 255, .08);
+}
+
+
+
+
+
+
+
+
+/* Cards secundários*/
+
 .cards {
   justify-content: center;
   align-items: center;
-  display: flex;
+  display: none;
   flex-wrap: wrap;
   width: 100%;
   margin: 0 auto;
@@ -147,6 +276,24 @@ nav ul li:hover {
   bottom: -350px;
   left: 0;
   right: 0;
+}
+
+.cards.mostrar {
+  display: flex;
+}
+
+.close-card {
+  position: absolute;
+  right: 10px;
+  top: 5px;
+  background: red;
+  border: 1px solid black;
+  z-index: 2;
+  width: 28px;
+  border-radius: 50%;
+  height: 28px;
+  cursor: pointer;
+  outline: none;
 }
 
 .card {
@@ -157,7 +304,7 @@ nav ul li:hover {
   margin: 20px;
   width: 260px;
   overflow: hidden;
-  box-shadow: 2px 2px 2px grey;
+  box-shadow: 2px 2px 2px black;
 }
 
 .card:hover {
@@ -231,10 +378,62 @@ nav ul li:hover {
   transition-delay: 0.7s;
 }
 
+@keyframes animecard {
+  from {
+    opacity: 0;
+    transform: translate3d(0, -400px, 0);
+  }
+
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+.cards {
+  animation: animecard 1s;
+}
+
+.skill-js {
+  display: flex;
+}
+
+.skill-js p {
+  font-size: 12pt;
+}
+
+#skilljs {
+  border: 2px solid rgb(255, 255, 9, .9);
+  width: 100px;
+  height: 45px;
+  margin: 5px;
+  background-color: rgb(255, 255, 9, .9);
+  margin-left: -8px;
+}
+
+#skilljs2 {
+  border: 2px solid rgb(156, 235, 39, .7);
+  width: 100px;
+  height: 45px;
+  margin: 5px;
+  background-color: rgb(156, 235, 39, .7);
+  padding-top: 12px;
+}
+
+#skilljs3 {
+  border: 2px solid rgb(98, 199, 224, .5);
+  width: 100px;
+  height: 45px;
+  margin: 5px;
+  background-color: rgb(98, 199, 224, .5);
+  padding-top: 12px;
+}
+
+
 /* Sessão projects*/
 
 #projects {
-  padding-top: 440px;
+  padding-top: 350px;
   width: 100%;
   display: grid;
   grid-template-columns: 1fr;
@@ -374,10 +573,12 @@ nav ul li:hover {
 .modal {
   background: white;
   width: 80%;
+  height: 80%;
   min-width: 300px;
   border: 5px solid yellow;
   box-shadow: 0 0 0 10px white;
   position: relative;
+  text-align: center;
 }
 
 .close {
@@ -397,8 +598,26 @@ nav ul li:hover {
 }
 
 .modal img {
-  width: 30%;
   padding: 10px;
+}
+
+#modal-promocao .modal img {
+  width: auto;
+  max-width: 100%;
+  margin: 0 auto;
+
+}
+
+#modal-promocao2 .modal img {
+  width: auto;
+  max-width: 40%;
+  min-width: 200px;
+}
+
+#modal-promocao3 .modal img {
+  width: auto;
+  max-width: 46%;
+
 }
 
 /* Calendário*/
@@ -485,15 +704,21 @@ nav ul li:hover {
 .img-box {
   width: 130px;
   height: 130px;
-  border: 1px solid red;
-  border-radius: 50%;
   margin: 0 auto;
 }
 
 .box-sobre p,
 h4 {
   text-align: center;
-  padding-top: 20px;
+  padding-top: 13px;
+  margin: 3px;
+}
+
+.box-sobre img {
+  cursor: pointer;
+  float: right;
+  position: absolute;
+  border-radius: 50%;
 }
 
 .contato-content {
@@ -579,6 +804,7 @@ textarea {
   border-radius: 50%;
   background-color: #fff;
   transition: .5s;
+  cursor: pointer;
 }
 
 .icon-footer ul li a {
@@ -589,6 +815,33 @@ textarea {
   color: #999;
   transform: translateY(-20px);
 }
+
+.wp {
+  position: fixed;
+  bottom: 10px;
+  right: 10px;
+  z-index: 999;
+}
+
+.wp img {
+  background-color: rgb(0, 0, 0);
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+}
+
+.wp p {
+  position: absolute;
+  right: 0px;
+  bottom: 65px;
+  color: green;
+}
+
+.wp img:hover {
+  background-color: wheat;
+  transition: .5s;
+}
+
 
 
 
@@ -619,10 +872,17 @@ textarea {
     z-index: 2;
     transition: 0.4s;
     padding-top: 80px;
+    text-transform: uppercase;
   }
 
   .logo {
     margin: 0 auto;
+  }
+
+  .logo img {
+    width: 200px;
+    position: absolute;
+    top: 20%;
   }
 
   .logo2 ul {
@@ -633,9 +893,10 @@ textarea {
   }
 
   nav ul li a {
-    padding-top: 50px;
+    padding: 10px;
     color: #fff;
-    border-bottom: 2px solid yellow;
+    border-left: 2px solid yellow;
+    margin-top: 40px;
   }
 
   .menu__move {
@@ -644,14 +905,17 @@ textarea {
   }
 
   .burger {
-    top: 28px;
+    top: 13px;
     right: 50px;
     z-index: 2;
     position: absolute;
     float: right;
     display: flex;
     cursor: pointer;
-    color: #fff;
+  }
+
+  .burger img {
+    width: 50px;
   }
 
   #logo-mobile {
@@ -679,16 +943,34 @@ textarea {
     min-width: 30%;
   }
 
+  .container-card {
+    position: absolute;
+    top: 85%;
+  }
+
   #projects {
-    margin-top: -510px;
+    margin-top: 310px;
   }
 
   #projects h2 {
-    margin-top: 50px;
+    margin-top: 10px;
+  }
+
+  .container-card {
+    flex-wrap: wrap;
+  }
+
+  .container-card .box-card {
+    width: 350px;
+    box-shadow: 8px 8px 5px black;
   }
 
   .box-sobre {
     margin-left: 0px;
+  }
+
+  .contato-content {
+    margin-left: 25px;
   }
 }
 
@@ -739,5 +1021,11 @@ textarea {
 
   .box-project {
     height: 760px;
+  }
+
+  .contato-content {
+    margin-top: 30px;
+    margin-left: 0px;
+    width: 52%;
   }
 }

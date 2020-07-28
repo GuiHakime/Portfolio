@@ -162,3 +162,27 @@ Preview2.addEventListener('click', () => {
 Preview3.addEventListener('click', () => {
     iniciaModal('modal-promocao3')
 })
+
+
+//Função de troca de conteúdo principal
+
+function showcards(cardID) {
+    const card = document.getElementById(cardID);
+    if (card) {
+        card.classList.add('mostrar')
+        card.addEventListener('click', (e) => {
+            if (e.target.id == cardID || e.target.className == 'close-card') {
+                card.classList.remove('mostrar')
+                firstcard.classList.add('txt')
+            }
+        })
+    }
+}
+
+const btncard = document.querySelector('#skills')
+const firstcard = document.querySelector('.container-card')
+btncard.addEventListener('click', () => {
+    showcards('cards-js')
+    firstcard.classList.remove('txt')
+
+})
