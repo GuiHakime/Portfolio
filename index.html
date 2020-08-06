@@ -226,12 +226,15 @@
 
     <div class="contato-content">
       <h1>Entre em contato</h1>
-      <form method="POST" action="">
-        <input type="text" placeholder="NOME" id="nome" />
-        <input type="text" placeholder="EMAIL" id="email" />
-        <input type="text" placeholder="qualquer" id="qualquer" />
-        <textarea name="" id="" cols="30" rows="10" id="assunto"></textarea>
-        <button type="submit">ENIVAR</button>
+      <form action="//formspree.io/guihakimeandrade@gmail.com" method="POST">
+        <input type="text" name="name" placeholder="NOME" id="nome" / required>
+        <input type="text" name="email" placeholder="EMAIL" id="email" / required>
+
+        <input type="hidden" name="_subject" value="Contato pelo site!">
+        <input type="text" name="_gotcha" style="display:none" />
+
+        <textarea name="text" id="" cols="30" rows="10" id="assunto" placeholder="MENSAGEM" required></textarea>
+        <button type="submit" onclick="validacao()">ENIVAR</button>
       </form>
     </div>
   </div>
@@ -293,6 +296,7 @@
   </div>
 
   <script src="script.js"></script>
+  <script src="validacao.js"></script>
 </body>
 
 </html>
