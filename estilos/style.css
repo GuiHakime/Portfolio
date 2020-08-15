@@ -148,7 +148,7 @@ nav ul li a:hover {
 /*Sessão Cards*/
 #skills {
   position: absolute;
-  bottom: 90px;
+  top: 68%;
   margin-left: 10%;
   border-bottom-left-radius: 20px;
   width: 160px;
@@ -433,7 +433,7 @@ nav ul li a:hover {
 /* Sessão projects*/
 
 #projects {
-  padding-top: 350px;
+  padding-top: 20%;
   width: 100%;
   display: grid;
   grid-template-columns: 1fr;
@@ -461,7 +461,7 @@ nav ul li a:hover {
   margin-top: 50px;
   margin-bottom: 20px;
   padding-bottom: 90px;
-  border-left: 2px solid yellow;
+  
 }
 
 .box-project button {
@@ -885,7 +885,7 @@ textarea {
   .logo img {
     width: 200px;
     position: absolute;
-    top: 20%;
+    top: 29%;
   }
 
   .logo2 ul {
@@ -909,19 +909,22 @@ textarea {
 
   .burger {
     top: 13px;
-    right: 50px;
-    z-index: 2;
+    right: 0;
     position: absolute;
+    z-index: 222;
+    justify-content: center;
     float: right;
     display: flex;
     cursor: pointer;
   }
 
   .burger img {
-    width: 50px;
+    width: 50%;
   }
 
   #logo-mobile {
+    padding: 5px;
+    font-size: 1.rem;
     margin: 0 auto;
     display: flex;
     justify-content: center;
@@ -952,7 +955,7 @@ textarea {
   }
 
   #projects {
-    margin-top: 310px;
+    margin-top: 45rem;
   }
 
   #projects h2 {
