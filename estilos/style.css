@@ -174,14 +174,6 @@ nav ul li a:hover {
   padding-left: 20px;
 }
 
-#danger {
-  margin-bottom: -20px;
-  padding-top: 5px;
-  color: rgb(134, 9, 9, .8);
-}
-
-
-
 .container-card {
   justify-content: center;
   align-items: center;
